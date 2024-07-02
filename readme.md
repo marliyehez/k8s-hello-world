@@ -25,25 +25,26 @@ This repository is structured to facilitate learning Kubernetes (k8s) using Mini
 - **Python**: A general-purpose programming language.
 
 ## Instructions
-1. Create and Activate Python Virtual Environment
-2. Install Python Libraries
+1. Clone this repo using `git clone` command.
+2. Create and Activate Python Virtual Environment
+3. Install Python Libraries
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Build and Push Docker Image
+4. Build and Push Docker Image
 ```bash
 docker build -t your_dockerhub_username/flask-app .
 docker push your_dockerhub_username/flask-app
 ```
 
-4. Start Minikube
+5. Start Minikube
 ```bash
 minikube start --driver docker
 ```
 
-5. Deploy the Application
+6. Deploy the Application
 ```bash
 # Apply YAML Files
 kubectl apply -f k8s
@@ -52,7 +53,7 @@ kubectl apply -f k8s
 kubectl get all
 ```
 
-6. Access the Web Application
+7. Access the Web Application
 ```bash
 minikube service flask-app-service --url
 ```
